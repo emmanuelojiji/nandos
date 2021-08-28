@@ -153,13 +153,13 @@ nav a {
 }
 
 .h1-lines::before {
-  content: url("/line.png");
+  content: url("line.png");
   position: relative;
   top: 14px;
 }
 
 .h1-lines::after {
-  content: url("/line.png");
+  content: url("line.png");
   display: inline-block;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
