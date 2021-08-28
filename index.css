@@ -315,7 +315,7 @@ nav a {
 
 .button-container button {
   font-family: "d-din_condenseddinCnBd";
-  font-size: 1.4em;
+  font-size: 1.4em !important;
   background-color: #01e2c2;
   border: 0;
   height: 100%;
@@ -409,7 +409,6 @@ nav a {
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  font-size: 2em;
   text-align: center;
   padding-left: 5%;
   padding-right: 5%;
@@ -418,11 +417,13 @@ nav a {
 .section-3 figure h1 {
   font-family: 'Nandos-regular';
   margin-bottom: 20px;
+  font-size: 2em;
 }
 
 .section-3 figure p {
   font-family: "d-din_condenseddinCnBd";
-  font-size: 0.6em;
+  font-size: 1.6em;
+  margin-bottom: 40px;
 }
 
 .section-3 figure:nth-child(1) {
