@@ -1,0 +1,633 @@
+@font-face {
+  font-family: "Nandos-Regular";
+  src: url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.eot");
+  src: url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.woff") format("woff"), url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.svg#Nandos-Regular") format("svg");
+}
+
+@font-face {
+  font-family: "d-dinregular";
+  src: url("d-din-webfont.woff2") format("woff2"), url("d-din-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-dindin-bold";
+  src: url("d-din-bold-webfont.woff2") format("woff2"), url("d-din-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-din_condensedregular";
+  src: url("d-dincondensed-webfont.woff2") format("woff2"), url("d-dincondensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-din_condenseddinCnBd";
+  src: url("d-dincondensed-bold-webfont.woff2") format("woff2"), url("d-dincondensed-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-din_expregular";
+  src: url("d-dinexp-webfont.woff2") format("woff2"), url("d-dinexp-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-din_expdinexp-bold";
+  src: url("d-dinexp-bold-webfont.woff2") format("woff2"), url("d-dinexp-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-din_expdinexp-italic";
+  src: url("d-dinexp-italic-webfont.woff2") format("woff2"), url("d-dinexp-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-dindin-italic";
+  src: url("d-din-italic-webfont.woff2") format("woff2"), url("d-din-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.header-pusher {
+  height: 65px;
+  width: 100%;
+  background-color: red;
+}
+
+header {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: fixed;
+  width: 100%;
+  z-index: 50000;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.logo {
+  width: 114px;
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop-logo {
+    display: none;
+  }
+}
+
+.mobile-logo {
+  display: none;
+  width: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-logo {
+    display: block;
+  }
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0.9;
+      -ms-flex: 0.9;
+          flex: 0.9;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+
+nav a {
+  font-family: "d-din_condenseddinCnBd";
+  font-size: 1.2em;
+}
+
+.h1-lines::before {
+  content: url("/line.png");
+  position: relative;
+  top: 14px;
+}
+
+.h1-lines::after {
+  content: url("/line.png");
+  display: inline-block;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+}
+
+.billboard {
+  height: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/wallpaper.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/wallpaper.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .billboard {
+    height: 650px;
+  }
+}
+
+.billboard .billboard-wrap {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+
+.billboard h1 {
+  font-family: "Nandos-Regular";
+  font-size: 4.2em;
+  color: white;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.billboard p {
+  color: white;
+  font-family: "d-din_expdinexp-bold";
+  font-size: 1.4em;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+
+.billboard .button-container {
+  margin-top: 50px;
+}
+
+.billboard .button-container button:hover {
+  background-color: white;
+  color: black;
+}
+
+.billboard svg {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.billboard .waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+/* Animation */
+.parallax > use {
+  -webkit-animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+
+@-webkit-keyframes move-forever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
+}
+
+@keyframes move-forever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+}
+
+.button-container {
+  position: relative;
+  height: 45px;
+  display: inline-block;
+}
+
+.button-container button {
+  font-family: "d-din_condenseddinCnBd";
+  font-size: 1.4em;
+  background-color: #01e2c2;
+  border: 0;
+  height: 100%;
+  width: 200px;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 7.5px solid transparent;
+  border-right: 7.5px solid transparent;
+  border-top: 15px solid #f701b4;
+  position: absolute;
+  top: -3px;
+  left: 18px;
+}
+
+.section-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ff234f;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 70px;
+}
+
+.section-2 h1 {
+  font-family: "Nandos-Regular";
+  font-size: 2.8em;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.section-2 p {
+  color: white;
+  max-width: 660px;
+  text-align: center;
+  font-size: 1.6em;
+  font-family: "d-din_condenseddinCnBd";
+  line-height: 35px;
+}
+
+.section-3 {
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .section-3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 900px;
+  }
+}
+
+.section-3 figure {
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.section-3 figure h1 {
+  font-family: 'Nandos-regular';
+  margin-bottom: 20px;
+}
+
+.section-3 figure p {
+  font-family: "d-din_condenseddinCnBd";
+  font-size: 0.6em;
+}
+
+.section-3 figure:nth-child(1) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/pina-colada.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/pina-colada.jpg");
+}
+
+.section-3 figure:nth-child(2) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/bloody-mary.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/bloody-mary.jpg");
+}
+
+.section-3 figure:nth-child(3) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/mojito.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/mojito.jpg");
+}
+
+.section-4 {
+  height: 500px;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  .section-4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.section-4 .section-4-right {
+  text-align: center;
+}
+
+.section-4 .card-container {
+  width: 400px;
+  margin-right: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .section-4 .card-container {
+    width: 250px;
+    margin-right: 0;
+  }
+}
+
+.section-4 img {
+  max-width: 100%;
+  margin-right: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+  .section-4 img {
+    margin-right: 0;
+  }
+}
+
+.section-4 h1 {
+  font-family: 'Nandos-regular';
+  font-size: 2.8em;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.section-4 .h1-line {
+  text-align: center;
+}
+
+.section-4 .h1-line::after {
+  content: url("/line-black.png");
+  display: inline-block;
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+
+.section-4 p {
+  font-family: "d-din_condenseddinCnBd";
+  font-size: 1.6em;
+  max-width: 660px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.deal-section {
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .deal-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 900px;
+  }
+}
+
+.deal-section .deal {
+  height: 100%;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .deal-section .deal {
+    width: 100%;
+  }
+}
+
+.deal-section .deal h1 {
+  font-family: 'Nandos-regular';
+  font-size: 2.5em;
+}
+
+.deal-section .deal p {
+  font-family: "d-din_condenseddinCnBd";
+  font-size: 1.6em;
+  margin-bottom: 40px;
+}
+
+.deal-section .deal-left {
+  background-image: url(/deal-background-2.jpg);
+}
+
+.deal-section .deal-right {
+  background-image: url(/deal-background.jpg);
+  color: white;
+}
+
+footer {
+  height: 500px;
+  background-color: #1a1a1a;
+  background-image: url("/deal-background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer h1 {
+  font-family: 'Nandos-Regular';
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+footer p {
+  font-family: "d-din_condenseddinCnBd";
+  font-size: 2em;
+}
+
+footer p:nth-child(4) {
+  margin-top: 30px;
+}
+
+.thin {
+  font-family: "d-dinregular";
+  font-size: 0.8em;
+}
+/*# sourceMappingURL=index.css.map */

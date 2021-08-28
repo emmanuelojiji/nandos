@@ -1,0 +1,533 @@
+@font-face {
+  font-family: "Nandos-Regular";
+  src: url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.eot");
+  src: url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.svg#Nandos-Regular")
+      format("svg");
+}
+
+@font-face {
+  font-family: "d-dinregular";
+  src: url("d-din-webfont.woff2") format("woff2"),
+    url("d-din-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-dindin-bold";
+  src: url("d-din-bold-webfont.woff2") format("woff2"),
+    url("d-din-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-din_condensedregular";
+  src: url("d-dincondensed-webfont.woff2") format("woff2"),
+    url("d-dincondensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-din_condenseddinCnBd";
+  src: url("d-dincondensed-bold-webfont.woff2") format("woff2"),
+    url("d-dincondensed-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-din_expregular";
+  src: url("d-dinexp-webfont.woff2") format("woff2"),
+    url("d-dinexp-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-din_expdinexp-bold";
+  src: url("d-dinexp-bold-webfont.woff2") format("woff2"),
+    url("d-dinexp-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-din_expdinexp-italic";
+  src: url("d-dinexp-italic-webfont.woff2") format("woff2"),
+    url("d-dinexp-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-dindin-italic";
+  src: url("d-din-italic-webfont.woff2") format("woff2"),
+    url("d-din-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$body-font-regular: "d-dinregular";
+$body-font-bold: "d-din_expdinexp-bold";
+$body-font-regular-condensed: "d-din_condenseddinCnBd";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  overflow-x: hidden;
+}
+
+a,button{
+  cursor: pointer;
+}
+
+.header-pusher{
+  height: 65px;
+  width: 100%;
+  background-color: red;
+}
+
+header {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  align-items: flex-end;
+  position: fixed;
+  width: 100%;
+  z-index: 50000;
+
+  @media only screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
+
+ 
+}
+
+.logo {
+  width: 114px;
+}
+
+.desktop-logo{
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-logo{
+  display: none;
+  width: 30px;
+
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex: 0.9;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
+  a {
+    font-family: $body-font-regular-condensed;
+    font-size: 1.2em;
+  }
+}
+
+.h1-lines {
+  &::before {
+    content: url("/line.png");
+    position: relative;
+    top: 14px;
+  }
+
+  &::after {
+    content: url("/line.png");
+    display: inline-block;
+    transform: rotate(2deg);
+  }
+}
+
+.billboard {
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/wallpaper.jpeg");
+  background-position: center;
+  background-size: cover;
+
+  @media only screen and (max-width: 768px) {
+    height: 650px;
+  }
+
+  .billboard-wrap {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    font-family: "Nandos-Regular";
+    font-size: 4.2em;
+    color: white;
+    transform: rotate(-3deg);
+  }
+
+  p {
+    color: white;
+    font-family: $body-font-bold;
+    font-size: 1.4em;
+    transform: rotate(-3deg);
+    margin-top: 20px;
+    margin-bottom: 14px;
+  }
+
+  .button-container {
+    margin-top: 50px;
+
+    button{
+      &:hover{
+        background-color: white;
+        color:black;
+      }
+    }
+  }
+
+  svg {
+    align-self: flex-end;
+  }
+
+  .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px; /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+  }
+
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+
+}
+
+.button-container {
+  position: relative;
+  height: 45px;
+  display: inline-block;
+
+  button {
+    font-family: $body-font-regular-condensed;
+    font-size: 1.4em;
+    background-color: #01e2c2;
+    border: 0;
+    height: 100%;
+    width: 200px;
+    transition: 0.1s ease;
+    cursor: pointer;
+  }
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 7.5px solid transparent;
+  border-right: 7.5px solid transparent;
+  border-top: 15px solid #f701b4;
+  position: absolute;
+  top: -3px;
+  left: 18px;
+}
+
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ff234f;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 70px;
+
+  h1 {
+    font-family: "Nandos-Regular";
+    font-size: 2.8em;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: white;
+    max-width: 660px;
+    text-align: center;
+    font-size: 1.6em;
+    font-family: $body-font-regular-condensed;
+    line-height: 35px;
+  }
+}
+
+.section-3{
+  height: 500px;
+  display: flex;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    height: 900px;
+  }
+
+  figure{
+    height: 100%;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    h1{
+      font-family: 'Nandos-regular';
+      margin-bottom: 20px;
+    }
+
+    p{
+      font-family: $body-font-regular-condensed;
+      font-size: 0.6em;
+    }
+
+    &:nth-child(1){
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/pina-colada.jpg");
+    }
+
+    &:nth-child(2){
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/bloody-mary.jpg");
+    }
+
+    &:nth-child(3){
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/mojito.jpg");
+    }
+    
+  }
+}
+
+.section-4 {
+  height: 500px;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .section-4-right{
+    text-align: center;
+  }
+
+  .card-container{
+    width: 400px;
+    margin-right: 100px;
+
+    @media only screen and (max-width: 768px) {
+      width: 250px;
+      margin-right: 0;
+    }
+  }
+
+  img{
+    max-width: 100%;
+    margin-right: 10%;
+
+    @media only screen and (max-width: 768px) {
+      margin-right: 0;
+    }
+  }
+
+  h1{
+    font-family: 'Nandos-regular';
+    font-size: 2.8em;
+    transform: rotate(-3deg);
+  }
+
+  .h1-line{
+    &::after{
+      content: url('/line-black.png');
+      display: inline-block;
+      transform: rotate(3deg);
+    }
+
+    text-align: center;
+  }
+
+  p{
+    font-family: $body-font-regular-condensed;
+    font-size: 1.6em;
+    max-width:660px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+}
+
+.deal-section{
+  height: 500px;
+  display: flex;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    height: 900px;
+  }
+
+  .deal{
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    h1{
+      font-family: 'Nandos-regular';
+      font-size: 2.5em;
+    }
+
+    p{
+      font-family: $body-font-regular-condensed;
+      font-size: 1.6em;
+      margin-bottom: 40px;
+    }
+  }
+
+  .deal-left{
+    background-image: url(/deal-background-2.jpg);
+  }
+
+  .deal-right{
+    background-image: url(/deal-background.jpg);
+   color: white;
+  }
+}
+
+footer{
+  height: 500px;
+  background-color: #1a1a1a;
+  background-image: url('/deal-background.jpg');
+  background-size: cover;
+  background-position: center;
+
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1{
+    font-family: 'Nandos-Regular';
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+
+  p{
+    font-family: $body-font-regular-condensed;
+    font-size: 2em;
+
+    &:nth-child(4){
+      margin-top: 30px;
+    }
+
+  }
+}
+
+.thin{
+  font-family: $body-font-regular;
+  font-size: 0.8em;
+}
