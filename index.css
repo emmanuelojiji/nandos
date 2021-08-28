@@ -67,11 +67,13 @@
           box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   overflow-x: hidden;
 }
 
-a, button {
+a,
+button {
   cursor: pointer;
 }
 
@@ -102,6 +104,17 @@ header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header button {
+    font-size: 1em !important;
+    height: 100%;
+    width: 150px !important;
+    -webkit-transition: 0.1s ease;
+    transition: 0.1s ease;
+    cursor: pointer;
   }
 }
 
@@ -315,7 +328,7 @@ nav a {
 
 .button-container button {
   font-family: "d-din_condenseddinCnBd";
-  font-size: 1.4em !important;
+  font-size: 1.4em;
   background-color: #01e2c2;
   border: 0;
   height: 100%;
@@ -384,7 +397,7 @@ nav a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 900px;
+    height: auto;
   }
 }
 
@@ -414,8 +427,15 @@ nav a {
   padding-right: 5%;
 }
 
+@media only screen and (max-width: 768px) {
+  .section-3 figure {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
 .section-3 figure h1 {
-  font-family: 'Nandos-regular';
+  font-family: "Nandos-regular";
   margin-bottom: 20px;
   font-size: 2em;
 }
@@ -495,11 +515,12 @@ nav a {
 @media only screen and (max-width: 768px) {
   .section-4 img {
     margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 
 .section-4 h1 {
-  font-family: 'Nandos-regular';
+  font-family: "Nandos-regular";
   font-size: 2.8em;
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
@@ -571,7 +592,7 @@ nav a {
 }
 
 .deal-section .deal h1 {
-  font-family: 'Nandos-regular';
+  font-family: "Nandos-regular";
   font-size: 2.5em;
 }
 
@@ -613,7 +634,7 @@ footer {
 }
 
 footer h1 {
-  font-family: 'Nandos-Regular';
+  font-family: "Nandos-Regular";
   font-size: 3em;
   margin-bottom: 30px;
 }
