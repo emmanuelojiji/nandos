@@ -181,8 +181,8 @@ nav a {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/wallpaper.jpeg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/wallpaper.jpeg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("wallpaper.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("wallpaper.jpeg");
   background-position: center;
   background-size: cover;
 }
@@ -426,18 +426,18 @@ nav a {
 }
 
 .section-3 figure:nth-child(1) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/pina-colada.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/pina-colada.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("pina-colada.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("pina-colada.jpg");
 }
 
 .section-3 figure:nth-child(2) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/bloody-mary.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/bloody-mary.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("bloody-mary.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bloody-mary.jpg");
 }
 
 .section-3 figure:nth-child(3) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/mojito.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/mojito.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("mojito.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("mojito.jpg");
 }
 
 .section-4 {
@@ -509,7 +509,7 @@ nav a {
 }
 
 .section-4 .h1-line::after {
-  content: url("/line-black.png");
+  content: url("line-black.png");
   display: inline-block;
   -webkit-transform: rotate(3deg);
           transform: rotate(3deg);
@@ -581,18 +581,18 @@ nav a {
 }
 
 .deal-section .deal-left {
-  background-image: url(/deal-background-2.jpg);
+  background-image: url("deal-background-2.jpg");
 }
 
 .deal-section .deal-right {
-  background-image: url(/deal-background.jpg);
+  background-image: url("deal-background.jpg");
   color: white;
 }
 
 footer {
   height: 500px;
   background-color: #1a1a1a;
-  background-image: url("/deal-background.jpg");
+  background-image: url("deal-background.jpg");
   background-size: cover;
   background-position: center;
   color: white;
